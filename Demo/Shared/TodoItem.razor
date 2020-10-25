@@ -1,0 +1,22 @@
+﻿@*<div class="todo">
+    <input type="checkbox" @bind="@done" /> 
+    <span class="@textclass">@MyText</span>
+</div>*@
+
+<tr class="todo @rowClass">
+    <td class="text-center"> <input type="checkbox" @bind="DDone"/> </td>
+    <td class="@textClass">@MyText</td>
+</tr>
+
+
+
+    
+@code {
+    [Parameter]
+    public string MyText { get; set; }
+    [Parameter]
+    public bool DDone { get; set; }
+
+    string textClass => DDone ? "DDone text-muted" : null;
+    string rowClass => DDone ? "table-secondary" : null;
+}

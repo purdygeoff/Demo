@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<h1> todo sample</h1>
+@*<TodoItem MyText="parmv watch videos about BBlazorr" />
+<TodoItem MyText="create own blazor app"/>*@
+
+<ToDoList Todos="@todos"/>
+
+@code{
+        IList<Todo> todos = new List<Todo>
+    {
+        new Todo { MyText = "lst watch videos about blazor" },
+        new Todo { MyText = "lst2 watch more create own app" }
+    };
+}
